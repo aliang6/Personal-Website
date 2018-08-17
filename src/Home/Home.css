@@ -1,0 +1,166 @@
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: url('../assets/font/raleway/Raleway-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('../assets/font/raleway/Raleway-Light.ttf');
+}
+
+
+/* Home Component */
+@keyframes breathing {
+  from { transform: scale(1); }
+  50% { transform: scale(1.015); }
+  to { transform: scale(1); }
+}
+
+.home-container {
+  height: 100%;
+  width: 100%;
+  z-index: -3;
+  display: block;
+  overflow: hidden;
+}
+
+.home-container::after {
+  content: '';
+  height: 1px;
+  margin: 0 3%;
+  width: auto;
+  background-color: rgba(255, 215, 0, .7);
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+}
+
+.home-overlay {
+  position: relative;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(to bottom right, rgba(212, 175, 55, .2), rgba(0, 0, 0, .2));
+  background-size: 100%;
+  color: rgba(255, 255, 255, 1);
+  flex-direction: column;
+}
+
+/* .home-overlay::after {
+  content: " ";
+  position: absolute;
+  top: -10%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-size: 100%;
+  background-image: url(../assets/img/back.jpg);
+  background-repeat: no-repeat;
+  animation: 4s infinite breathing ease-in-out;
+} */
+
+.background-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.home-background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url(../assets/img/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: 4s infinite breathing ease-in-out;
+  z-index: -2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.name {
+  font-size: 6em;
+  margin-left: 5%;
+  margin-top: 10%;
+  font-family: 'Raleway-Thin', 'sans-serif';
+  z-index: 3;
+}
+
+.desc {
+  margin-top: 1.5%;
+}
+
+.desc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: .5%;
+  font-size: 2rem;
+  align-items: flex-end;
+  font-family: 'Raleway-Light', 'sans-serif';
+  z-index: 3;
+}
+
+.pro-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 2.25rem;
+}
+
+.pro-links span {
+  margin-left: 7%;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 480px) {
+  .home-container {
+    height: 100vh;
+  }
+  .name {
+    text-align: center;
+    margin-right: 3%;
+  }
+  .desc {
+    width: 95%;
+  }
+  .desc-list{
+    width: 95%;
+    text-align: center;
+  }
+  .pro-links {
+    width: 95%;
+    justify-content: center;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 480px) and (max-width : 1024px){
+  .desc-list {
+    width: 50%;
+    text-align: left;
+  }
+  .pro-links {
+    width: 20%;
+    justify-content: center;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1024px) {
+  .desc-list {
+    width: 50%;
+    text-align: left;
+  }
+  .pro-links {
+    width: 20%;
+    justify-content: center;
+  }
+}

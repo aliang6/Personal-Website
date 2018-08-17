@@ -1,0 +1,244 @@
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: url('../assets/font/raleway/Raleway-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('../assets/font/raleway/Raleway-Light.ttf');
+}
+
+.projects-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 215, 0, .85);
+  background-color: rgba(33, 33, 33, 1)
+}
+
+.projects-container::after {
+  content: '';
+  height: 1px;
+  margin: 1% 3%;
+  width: auto;
+  background-color: rgba(255, 215, 0, .5);
+  display: flex;
+  text-align: center;
+}
+
+.projects-title {
+  margin: 5% 0 2% 3%;
+  font-size: 3rem;
+  font-family: 'Raleway-Thin', 'sans-serif';
+}
+
+.projects-section {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  margin: 0 3% 1% 3%;
+}
+
+.project-container {
+  height: 95%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, .5);
+  font-size: 1.25rem;
+  font-family: 'Raleway-Light', 'sans-serif';
+  border: 1px solid rgba(255, 215, 0, .5);
+  border-radius: 10px;
+  transition: .7s;
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project-container:hover {
+  color: rgba(255, 255, 255, .5);
+  animation: 2s border-breath infinite ease;
+  background-color: rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+
+/* .project-image {
+  position: relative;
+  height: 95%;
+  width: 25%;
+  background-image: url(../assets/img/prestige.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+} */
+
+.react-logo {
+  background-image: url('../assets/img/react-logo.png');
+}
+
+.react-logo:hover {
+  background-image: url('../assets/img/react-logo-wordmark.png');
+}
+
+.nodejs-logo {
+  background-image: url('../assets/img/nodejs-logo.png');
+}
+
+.nodejs-logo:hover {
+  background-image: url('../assets/img/nodejs-logo-wordmark.png');
+}
+
+.java-logo {
+  background-image: url('../assets/img/java-logo.png');
+}
+
+.java-logo:hover {
+  background-image: url('../assets/img/java-logo-wordmark.png');
+}
+
+.c-logo {
+  background-image: url('../assets/img/c-logo.png');
+}
+
+.c-logo:hover {
+  background-image: url('../assets/img/c-logo.png');
+}
+
+.asm-logo {
+  background-image: url('../assets/img/asm-logo.png');
+}
+
+.asm-logo:hover {
+  background-image: url('../assets/img/asm-logo.png');
+}
+
+.project-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(20, 20, 20, .75);
+}
+
+.project-name {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 35%;
+  color: rgba(255, 255, 255, .75);
+  margin-top: 5%;
+  font-size: 1.75rem;
+  transition: .3s;
+  border-bottom: 1px solid rgba(212, 175, 55, 0);
+  z-index: 2;
+}
+
+.project-container:hover .project-name {
+  top: 0%;
+  border-bottom: 1px solid rgba(212, 175, 55, .85);
+  color: rgba(212, 175, 55, .85);
+}
+
+.project-hover {
+  display: flex;
+  flex-direction: column;
+  transition: .5s;
+  color: rgba(255, 255, 255, 0);
+  z-index: 2;
+}
+
+.project-container:hover .project-hover {
+  color: rgba(255, 255, 255, .7);
+  transition: .5s;
+}
+
+.project-desc {
+  margin: 3%;
+  font-size: 1rem;
+}
+
+.project-github {
+  justify-content: center;
+  margin: 2%;
+  padding: 2% 3%;
+  color: rgba(255, 255, 255, 0);
+  border: 1px solid rgba(255, 215, 0, 0);
+  border-radius: 10px;
+  align-self: center;
+  transition: .5s;
+}
+
+.project-container:hover .project-github,
+.project-container:hover .project-website {
+  border: 1px solid rgba(212, 175, 55, .65);
+  background-color: rgba(40, 40, 40, .85);
+}
+
+.project-container:hover .project-github:hover,
+.project-container:hover .project-website:hover {
+  border: 1px solid rgba(212, 175, 55, 1);
+  transition: .3s;
+}
+
+.project-website {
+  justify-content: center;
+  margin-top: 2%;
+  padding: 2% 3%;
+  border: 1px solid rgba(255, 215, 0, 0);
+  border-radius: 10px;
+  align-self: center;
+}
+
+.project-container a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0);
+  transition: .5s;
+}
+
+.project-container:hover a {
+  color: rgba(255, 255, 255, .75);
+}
+
+@keyframes border-breath {
+  from {
+    border: 1px solid rgba(255, 215, 0, .5);
+  }
+  50% {
+    border: 1px solid rgba(255, 215, 0, 75);
+  }
+  to {
+    border: 1px solid rgba(255, 215, 0, .5);
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 480px) {
+  .projects-container {
+    height: auto;
+  }
+  .projects-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-container {
+    width: 95%;
+    height: 275px;
+    margin-bottom: 5%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 480px) and (max-width : 1024px) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1024px) {
+
+}

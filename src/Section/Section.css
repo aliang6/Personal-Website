@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: url('../assets/font/raleway/Raleway-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url('../assets/font/raleway/Raleway-Light.ttf');
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.section-title {
+  margin-bottom: 1%;
+  font-size: 3rem;
+  font-family: 'Raleway-Thin', 'sans-serif';
+  color: rgba(255, 215, 0, .85);
+}
